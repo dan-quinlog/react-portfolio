@@ -41,9 +41,15 @@ export default class PortfolioContainer extends Component {
     }
     
     portfolioItems() {
+        // Data that we'll need
+        // background image
+        // logo - logo_url
+        // description - description
+        // id - id
+        // ["id", "name", "description", "url", "category", "position", "thumb_image_url", "banner_image_url", "logo_url", "column_names_merged_with_images"]
 
         return this.state.data.map(item => {
-            return <PortfolioItem key={item.id} title={item.name} url={item.url} slug={item.id}/>; //title sets props in item
+            return <PortfolioItem key={item.id} item={item} />;//{item.name} url={item.url} slug={item.id}/>; //title sets props in item
         })
     }
 
@@ -63,9 +69,9 @@ export default class PortfolioContainer extends Component {
                 <button onClick={() => this.handleFilter('Scheduling')}>Scheduling</button>
                 <button onClick={() => this.handleFilter('Enterprise')}>Enterprise</button>
 
-                {this.portfolioItems()}
-
-
+                <div className="portfolio-items-wrapper">
+                    {this.portfolioItems()}
+                </div>
             </div>
         )
     }

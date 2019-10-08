@@ -31,9 +31,7 @@ export default class PortfolioContainer extends Component {
         .then(response => {
           this.setState({
               data: response.data.portfolio_items
-          })
-          console.log(response);
-    
+          });
         })
         .catch(error => {
           console.log(error);
@@ -62,16 +60,12 @@ export default class PortfolioContainer extends Component {
             return <div>Loading...</div>;
         }
         return ( // class based components have more ability to perform logic, essential for state or lifecycle hooks based components
-            <div>
-                <h2>{this.state.pageTitle}</h2>
+            <div className="portfolio-items-wrapper">
+                <button className="btn" onClick={() => this.handleFilter('eCommerce')}>eCommerce</button>
+                <button className="btn" onClick={() => this.handleFilter('Scheduling')}>Scheduling</button>
+                <button className="btn" onClick={() => this.handleFilter('Enterprise')}>Enterprise</button>
 
-                <button onClick={() => this.handleFilter('eCommerce')}>eCommerce</button>
-                <button onClick={() => this.handleFilter('Scheduling')}>Scheduling</button>
-                <button onClick={() => this.handleFilter('Enterprise')}>Enterprise</button>
-
-                <div className="portfolio-items-wrapper">
-                    {this.portfolioItems()}
-                </div>
+                {this.portfolioItems()}
             </div>
         )
     }

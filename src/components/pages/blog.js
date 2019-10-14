@@ -111,13 +111,13 @@ class Blog extends Component {
               <FontAwesomeIcon icon="plus-circle" />
             </a>
           </div>
-        ) : ( null
-          // <div className="new-blog-link">
-          //   <a onClick={this.handleNewBlogClick}>
-          //     <FontAwesomeIcon icon="plus-circle" />
-          //   </a>
-          // </div>
-        )}
+        ) : //null
+        <div className="new-blog-link">
+          <a onClick={this.handleNewBlogClick}>
+            <FontAwesomeIcon icon="plus-circle" />
+          </a>
+        </div>
+        }
         <div className="content-container">{blogRecords}</div>
         {this.state.isLoading ? (
           <div className="content-loader">

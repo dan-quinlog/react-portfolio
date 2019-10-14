@@ -6,8 +6,8 @@ constructor(props) {
 super(props);
 
 this.state = {
-  email: "",
-  password: "",
+  email: "dan.quinlog@gmail.com",//this should be empty strings in production
+  password: "edu34tMY@$$",
   errorText: ""
 }
 

@@ -1,0 +1,16 @@
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+
+  .contact-detail {
+    padding: 10px;
+    font-weight: 600;
+    color: $teal;
+    
+    .icon {
+      font-size: 1.5em;
+    }
+  }
+
+}

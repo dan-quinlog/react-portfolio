@@ -1,0 +1,14 @@
+.content-page-wrapper {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 91px);
+
+  .right-column {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+}

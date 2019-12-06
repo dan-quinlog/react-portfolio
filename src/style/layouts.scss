@@ -10,5 +10,19 @@
     align-self: center;
     flex-direction: column;
     padding: 20px;
+    color: #26bfd4;
+
+    &__header {
+      align-self: center;
+      font-weight: 600;
+    }
+
+    &__body {
+      padding: 50px;
+    }
+
+    &__footer {
+      align-self: center;
+    }
   }
 }
